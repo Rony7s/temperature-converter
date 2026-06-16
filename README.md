@@ -2,6 +2,9 @@
 
 A simple and interactive web application to convert temperatures between Celsius, Fahrenheit, and Kelvin.
 
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Frony7s%2Ftemperature-converter&label=Visitors&countColor=%2300ff00)
+
+
 ## 🚀 Features
 - Convert Celsius → Fahrenheit → Kelvin
 - Convert Fahrenheit → Celsius → Kelvin
