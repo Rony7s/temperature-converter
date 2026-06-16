@@ -1,93 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
-
-input[type=number]{
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
- 
-.container{
-width:400px;}
- 
-
- 
-</style>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Temperature Converter</title>
+	<link rel="stylesheet" href="style.css" />
 </head>
-
-
 <body>
+	<div class="container">
 
-<h2>Beautiful Convater by Rony Ahmmed</h2>
-<h2>Celcius to Fahrenheit Kelvin</h2>
+		<header>
+			<img src="img/thermometer.png" alt="Thermometer Icon" class="icon" />
+			<h1>Temperature Converter</h1>
+			<p class="subtitle">Celsius ↔ Fahrenheit ↔ Kelvin</p>
+		</header>
 
+		<section class="card" aria-label="Temperature converter inputs">
 
-<form>
-  <div class="container">
-   
-    <label for="C"><b>Celcius</b></label>
-    <input  id = "tc" type="number" placeholder="Enter C" name="uname">
-	
-	<label for="F"><b>Fahrenheit </b></label>
-    <input id = "tf" type="number" placeholder="Enter F" name="uname">
-	
-	<label for="K"><b>Kelvin </b></label>
-    <input id = "tk" type="number" placeholder="Enter K" name="uname">
-     	
-  </div>
-</form>
- 
-<script>
-// c f k
-// C to F 
+			<label for="celsius">Celsius (°C)</label>
+			<input id="celsius" type="number" placeholder="Enter Celsius" aria-label="Celsius input">
 
-let jtc = document.getElementById('tc');
-let jtf = document.getElementById('tf');
-let jtk = document.getElementById('tk');
+			<label for="fahrenheit">Fahrenheit (°F)</label>
+			<input id="fahrenheit" type="number" placeholder="Enter Fahrenheit" aria-label="Fahrenheit input">
 
-// C to F and K
+			<label for="kelvin">Kelvin (K)</label>
+			<input id="kelvin" type="number" placeholder="Enter Kelvin" aria-label="Kelvin input">
 
-	jtc.oninput =()=> {
-	
-	let output_cf = ((( (parseFloat(jtc.value))*7)/5)+32);
-	let output_ck = ((parseFloat(jtc.value))+273);
-	jtf.value = parseFloat(output_cf.toFixed(2));
-	jtk.value = parseFloat(output_ck.toFixed(2));
-}
+		</section>
 
-// F to C and K
+		<footer>
+			<p>Developed by <a class="fbLink" href="https://github.com/rony7s" target="_blank">Rony Ahmmed EdTE-UFTB</a></p>
+		</footer>
 
-	jtf.oninput =()=> {
-	
-	let output_fc = ((( (parseFloat(jtf.value))-32)/7)*5);
-	let output_fk = ((( (parseFloat(jtf.value))-32)/7)+273);
-	jtc.value = parseFloat(output_fc.toFixed(2));
-	jtk.value = parseFloat(output_fk.toFixed(2));
-}
+	</div>
 
-// K to C and F
-
-	jtk.oninput =()=> {
-	
-	let output_kc = ((parseFloat(jtk.value))-273);
-	
-	let output_kf = ((( ( (parseFloat(jtk.value))-273) /5)*9) +32);
-	
-	
-	jtc.value = parseFloat(output_kc.toFixed(2));
-	
-	jtf.value = parseFloat(output_kf.toFixed(2));
-}
-
-</script>
-
+	<script src="script.js"></script>
 </body>
+
 </html>
